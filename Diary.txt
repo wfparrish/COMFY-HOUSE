@@ -1,0 +1,99 @@
+8/16/2020
+
+Started ecommerce shopping cart tutorial
+https://www.youtube.com/watch?v=023Psne_-_4
+
+Code freeze at 1:57:52
+
+Set up store with local storage. 
+The next step is to set up the functionality of adding items to the cart
+
+---------------------------------------------------------------------
+
+8/17/2020
+
+.dataset property and data- attributes Youtube tutorial
+https://www.youtube.com/watch?v=Pt8RyyUWCtM
+data- attributes 
+dataset property
+
+event.target
+-what it returns
+-how it can be used to manipulate the DOM
+
+ex.
+
+Changes the text of the button element and then disables the button
+
+button.addEventListener("click", event => {
+  event.target.innerText = "In Cart";
+  event.target.disabled = true;
+});
+
+************************************************
+
+https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
+As easy as it is to use localStorage, it is also easy to misuse it. The following are limitations, and also ways to NOT use localStorage:
+
+Do not store sensitive user information in localStorage
+It is not a substitute for a server based database as information is only stored on the browser
+localStorage is limited to 5MB across all major browsers
+localStorage is quite insecure as it has no form of data protection and can be accessed by any code on your web page
+localStorage is synchronous, meaning each operation called would only execute one after the other
+
+
+With these, we have been armed with the power of localStorage in our web applications.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+The Web Storage API provides mechanisms by which browsers can 
+securely store key/value pairs.
+
+Code freeze at 2:42:36
+
+Set up the cart.
+
+-------------------------------------------------------------------------
+
+8/18/20
+
+  clearCart() {
+
+    //...this removes the item from the cart...
+
+    let cartItems = cart.map(item => item.id);
+    cartItems.forEach(id = this.removeItem(id)); 
+
+    //...this removes the item from the DOM...
+
+    while(cartContent.children.length > 0) {
+      cartContent.removeChild(cartContent.children[0])
+    }
+  }
+
+  the item has representation in JS
+  it also is a DOM element that should be removed
+
+  Code freeze at 3:46:00
+
+  ************************************************************
+
+  Project mostly complete. We are about to use contentlful.com to create
+  a serverless structure for our application.
+
+  ----------------------------------------------------------------------------------
+
+  8/19/2020
+
+  Documentation for Comfy House
+https://contentful.github.io/contentful.js/contentful/7.14.6/
+
+End result:
+Tutorial completed with Netlify NOT working
+for the shopping cart, but Netlify WILL load the restaurant-appJS repo
+
+----------------------------------------------------------------------
+
+9/5/2020
+
+Need to rewatch the video of the creation of this shopping cart. Study
+and understand all the details. 
